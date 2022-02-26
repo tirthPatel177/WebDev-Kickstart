@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Movie Review</title>
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+
+    <header>
+        <!-- Custom Navbar -->
+      <div class="navbar">
+        <img
+          src="data:image/png;base64,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"
+          class="logo"
+          alt="logo"
+        />
+        <div class="right-nav">
+            <button class="nice-button" onclick="toggleTheme()">Change Theme</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Image and Review -->
+    <div class="content">
+      <div class="section1">
+        <img
+          src="https://images.indianexpress.com/2021/05/friends-the-reunion-1200-2.jpg"
+          alt="friends"
+          width="70%"
+        />
+        <div class="review-container">
+          <div class="">
+            <h1>F.R.I.E.N.D.S Review</h1>
+            <p class="review">
+                Friends is an American television sitcom created by David Crane and Marta Kauffman, which aired on NBC from September 22, 1994, to May 6, 2004, lasting ten seasons. With an ensemble cast starring Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer, the show revolves around six friends in their 20s and 30s who live in Manhattan, New York City. The series was produced by Bright/Kauffman/Crane Productions, in association with Warner Bros. Television. The original executive producers were Kevin S. Bright, Kauffman, and Crane.
+            </p>
+            <button class="nice-button" ><a href="https://en.wikipedia.org/wiki/Friends">Watch it On</a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section2">
+        <div class="cast">
+          <div class="tile">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/David_Schwimmer_%285208598833%29.jpg/133px-David_Schwimmer_%285208598833%29.jpg"
+              alt="David Schwimmer"
+            />
+            <h3>David Schwimmer</h3>
+            <p>
+                Monica's "geeky" older brother, a palaeontologist working at the Museum of Natural History, and later a tenured professor of palaeontology at New York University. Ross is involved in an on-again, off-again relationship with Rachel throughout the series.   
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/59/Jennifer_Aniston_08.jpg"
+              alt="Jennifer Aniston"
+            />
+            <h3>Jennifer Aniston</h3>
+            <p>
+                A fashion enthusiast and Monica Geller's best friend from childhood. Rachel first moves in with Monica in season one after nearly marrying Barry Farber. Rachel and Ross Geller are later involved in an on-again, off-again relationship throughout the series.
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/CourteneyCoxFeb09.jpg/122px-CourteneyCoxFeb09.jpg"
+              alt="Courteney Cox"
+            />
+            <h3>Courteney Cox</h3>
+            <p>
+                The "mother hen" of the group and a chef,[17] known for her perfectionist, bossy, competitive, and obsessive-compulsive nature.[18][19] Monica was overweight as a child. She works as a chef in various restaurants throughout the show.
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Matthew_Perry_2013.jpg/133px-Matthew_Perry_2013.jpg"
+              alt="Matthew Perry"
+            />
+            <h3>Matthew Perry</h3>
+            <p>
+                An executive in statistical analysis and data reconfiguration for a large, multinational corporation. Chandler hates this job, although it pays well. He attempts to quit during season one but is lured back with a new office and a pay raise.
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Matthew_Perry_2013.jpg/133px-Matthew_Perry_2013.jpg"
+              alt="Matthew Perry"
+            />
+            <h3>Matthew Perry</h3>
+            <p>
+                An executive in statistical analysis and data reconfiguration for a large, multinational corporation. Chandler hates this job, although it pays well. He attempts to quit during season one but is lured back with a new office and a pay raise.
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Matthew_Perry_2013.jpg/133px-Matthew_Perry_2013.jpg"
+              alt="Matthew Perry"
+            />
+            <h3>Matthew Perry</h3>
+            <p>
+                An executive in statistical analysis and data reconfiguration for a large, multinational corporation. Chandler hates this job, although it pays well. He attempts to quit during season one but is lured back with a new office and a pay raise.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Later with Js -->
+
+      <!-- <div class="section4">
+        <div class="quotes">
+          <img
+            id="quotation"
+            src="https://github.com/hammercait/fylo-dark-theme-landing-page/blob/master/images/bg-quotes.png?raw=true"
+            alt="quotation mark"
+          />
+        </div> -->
+        <!-- Carousel Later with Js -->
+       <!--  <div class="quote-cards">
+          <div class="card">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch, our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <img
+              class="profile-pic"
+              src="https://github.com/hammercait/fylo-dark-theme-landing-page/blob/master/images/profile-1.jpg?raw=true"
+              alt="profile pic"
+            />
+            <h5>Satish Patel</h5>
+            <h6>Founder & CEO, Huddle</h6>
+          </div>
+          <div class="card">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch, our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <img
+              class="profile-pic"
+              src="https://github.com/hammercait/fylo-dark-theme-landing-page/blob/master/images/profile-2.jpg?raw=true"
+              alt="profile pic"
+            />
+            <h5>Bruce McKenzie</h5>
+            <h6>Founder & CEO, Huddle</h6>
+          </div>
+          <div class="card">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch, our team has become a well-oiled
+              collaboration machine.
+            </p>
+
+            <img
+              class="profile-pic"
+              src="https://github.com/hammercait/fylo-dark-theme-landing-page/blob/master/images/profile-3.jpg?raw=true"
+              alt="profile pic"
+            />
+            <h5>Iva Boyd</h5>
+            <h6>Founder & CEO, Huddle</h6>
+          </div>
+        </div>
+      </div>
+      
+    </div>  -->
+    
+
+    <script src="/js/script.js" async defer></script>
+  </body>
+</html>
