@@ -1,6 +1,6 @@
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
+    document.body.className = themeName;
 }
 // function to toggle between light and dark theme
 function toggleTheme() {
